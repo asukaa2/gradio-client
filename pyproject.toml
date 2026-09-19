@@ -11,6 +11,7 @@ name = "gradio_client"
 dynamic = ["version", "dependencies", "readme"]
 description = "Python library for easily interacting with trained machine learning models"
 license = "Apache-2.0"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 authors = [
   { name = "Abubakar Abid", email = "team@gradio.app" },
@@ -25,14 +26,13 @@ keywords = ["machine learning", "client", "API"]
 
 classifiers = [
   'Development Status :: 4 - Beta',
-  'License :: OSI Approved :: Apache Software License',
   'Operating System :: OS Independent',
   'Programming Language :: Python :: 3',
   'Programming Language :: Python :: 3 :: Only',
-  'Programming Language :: Python :: 3.8',
-  'Programming Language :: Python :: 3.9',
   'Programming Language :: Python :: 3.10',
   'Programming Language :: Python :: 3.11',
+  'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: 3.13',
   'Topic :: Scientific/Engineering',
   'Topic :: Scientific/Engineering :: Artificial Intelligence',
   'Topic :: Software Development :: User Interfaces',
@@ -59,16 +59,17 @@ include = [
   "/gradio_client",
   "/README.md",
   "/requirements.txt",
+  "/LICENSE",
 ]
 
 [tool.ruff]
 extend = "../../pyproject.toml"
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = [
   "gradio_client"
 ]
 
 [tool.pytest.ini_options]
 GRADIO_ANALYTICS_ENABLED = "False"
-HF_HUB_DISABLE_TELEMETRY =  "1"
+HF_HUB_DISABLE_TELEMETRY = "1"
