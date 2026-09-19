@@ -6,6 +6,9 @@ requires = [
 ]
 build-backend = "hatchling.build"
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [project]
 name = "gradio_client"
 dynamic = ["version", "dependencies", "readme"]
